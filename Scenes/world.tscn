@@ -1,3 +1,3 @@
-[gd_scene format=3 uid="uid://c52b6ssx6uxqd"]
+[gd_scene format=3 uid="uid://c4u2ly4qoi7p8"]
 
-[node name="Node2D" type="Node2D" unique_id=199795705]
+[node name="World" type="Node2D" unique_id=199795705]
