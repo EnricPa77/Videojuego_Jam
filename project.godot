@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom_font="uid://c6gu0te608kh3"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

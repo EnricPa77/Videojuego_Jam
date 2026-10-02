@@ -15,13 +15,51 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -125.0
-offset_right = 100.0
-offset_bottom = 125.0
+offset_left = -178.5
+offset_top = -177.5
+offset_right = 178.5
+offset_bottom = 177.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=45075224]
 layout_mode = 2
-text = "DEVUELVAN EL ORO ESPAÑOLITOS"
+theme_override_font_sizes/font_size = 60
+text = "PANCHITOS CREISIS"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1360699332]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.25
+offset_top = -64.375
+offset_right = 97.25
+offset_bottom = 64.375
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer2" unique_id=1749854724]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="VBoxContainer2" unique_id=655195202]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "OPTIONS"
+
+[node name="Button3" type="Button" parent="VBoxContainer2" unique_id=1919312434]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "EXIT"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2" unique_id=274819898]
+layout_mode = 2
+size_flags_vertical = 3
