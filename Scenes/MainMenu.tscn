@@ -1,70 +1,12 @@
 [gd_scene format=3 uid="uid://2mkhefr5ht4"]
 
-[ext_resource type="Texture2D" uid="uid://cyekclcohwdxw" path="res://Assets/UI/Textures/MenuPrincipalFondo.png" id="1_8saeu"]
-[ext_resource type="Texture2D" uid="uid://0rer1bsfft50" path="res://Assets/UI/Textures/HoverMainMenu.png" id="1_853f1"]
-[ext_resource type="Script" uid="uid://dc5qvj0378ivj" path="res://Scenes/main_menu.gd" id="1_df05h"]
-[ext_resource type="Shader" uid="uid://dn337h8ajl7g" path="res://Scenes/Scroll.gdshader" id="1_ghw46"]
-[ext_resource type="Texture2D" uid="uid://wkde2bcn8e3j" path="res://Assets/UI/Textures/ButtonMainMenu.png" id="1_tt5f1"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ghw46"]
-shader = ExtResource("1_ghw46")
-shader_parameter/speed = 0.05
-shader_parameter/paused = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
-bg_color = Color(0.22009555, 0.44562525, 1, 0.6431373)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.7835464, 0.8051572, 0.80806357, 1)
-corner_detail = 20
-expand_margin_left = 30.0
-expand_margin_top = 30.0
-expand_margin_right = 30.0
-expand_margin_bottom = 30.0
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_853f1"]
-load_path = "res://.godot/imported/ButtonMainMenu.png-184cd61725eb3c17b7a7385f78384bb5.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bnhvo"]
-texture = SubResource("CompressedTexture2D_853f1")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8saeu"]
-texture = ExtResource("1_853f1")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tt5f1"]
-texture = ExtResource("1_tt5f1")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghw46"]
-texture = ExtResource("1_853f1")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_853f1"]
-texture = ExtResource("1_tt5f1")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_df05h"]
-texture = ExtResource("1_853f1")
-
-[node name="MainMenu" type="Control" unique_id=653612274]
+[node name="Control" type="Control" unique_id=653612274]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_df05h")
-
-[node name="Background" type="TextureRect" parent="." unique_id=875843395]
-material = SubResource("ShaderMaterial_ghw46")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_8saeu")
-stretch_mode = 1
-flip_h = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=227954702]
 layout_mode = 1
@@ -73,75 +15,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -218.5
-offset_top = -177.5
-offset_right = 218.5
-offset_bottom = 177.5
+offset_left = -100.0
+offset_top = -125.0
+offset_right = 100.0
+offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Tittle" type="Label" parent="VBoxContainer" unique_id=45075224]
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=45075224]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "GOLD RUSH"
-horizontal_alignment = 1
-
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=535716398]
-self_modulate = Color(3.243, 3.243, 3.243, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -24.0
-offset_right = 150.0
-offset_bottom = 176.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_853f1")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=557316865]
-layout_mode = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1360699332]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 10
-
-[node name="Play" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1749854724]
-custom_minimum_size = Vector2(240, 68)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-size_flags_stretch_ratio = 1.5
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_bnhvo")
-theme_override_styles/hover = SubResource("StyleBoxTexture_8saeu")
-text = "PLAY"
-
-[node name="Options" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=655195202]
-custom_minimum_size = Vector2(180, 36)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxTexture_tt5f1")
-theme_override_styles/hover = SubResource("StyleBoxTexture_ghw46")
-text = "OPTIONS"
-
-[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1919312434]
-custom_minimum_size = Vector2(100, 36)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxTexture_853f1")
-theme_override_styles/hover = SubResource("StyleBoxTexture_df05h")
-text = "EXIT"
+text = "DEVUELVAN EL ORO ESPAÑOLITOS"
