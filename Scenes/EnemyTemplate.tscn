@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnc5ddas7ech7"]
 
-[ext_resource type="Script" uid="uid://ci0sfcjfhk5c4" path="res://Scripts/EnemyTemplate.gd" id="1_g4dba"]
-[ext_resource type="Texture2D" uid="uid://dh374mywdg8nh" path="res://png-transparent-sirloin-steak-beef-tenderloin-meat-flat-iron-steak-meat-beef-cooking-steak.png" id="2_p4to8"]
+[ext_resource type="Script" uid="uid://ci0sfcjfhk5c4" path="res://Scripts/Gameplay/EnemyTemplate.gd" id="1_g4dba"]
+[ext_resource type="Texture2D" uid="uid://dh374mywdg8nh" path="res://Assets/Sprites/png-transparent-sirloin-steak-beef-tenderloin-meat-flat-iron-steak-meat-beef-cooking-steak.png" id="2_p4to8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i7hxs"]
 radius = 49.0408

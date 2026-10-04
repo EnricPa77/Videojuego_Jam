@@ -22,6 +22,7 @@ window/stretch/aspect="expand"
 [gui]
 
 theme/custom_font="uid://c6gu0te608kh3"
+
 [input]
 
 click={
