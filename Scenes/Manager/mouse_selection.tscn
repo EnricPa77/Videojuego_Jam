@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://68km07q3of1n"]
+
+[ext_resource type="Script" uid="uid://y6deqfp2av4c" path="res://Scripts/mouse_selection.gd" id="1_s6t0l"]
+
+[node name="MouseSelection" type="Node" unique_id=1231394261]
+script = ExtResource("1_s6t0l")
+
+[node name="SelectionRect" type="ColorRect" parent="." unique_id=1291003728]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.37254903, 0.60784316, 0.7529412, 0.36078432)
