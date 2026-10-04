@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LimitTesting(AoE)"
-run/main_scene="uid://2mkhefr5ht4"
+run/main_scene="uid://c52b6ssx6uxqd"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [display]
@@ -19,9 +19,6 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
-[gui]
-
-theme/custom_font="uid://c6gu0te608kh3"
 [input]
 
 click={
