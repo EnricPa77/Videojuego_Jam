@@ -14,6 +14,10 @@ config/name="LimitTesting(AoE)"
 run/main_scene="uid://2mkhefr5ht4"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+GameState="*uid://bvxx6njp4rh62"
+
 [display]
 
 window/stretch/mode="canvas_items"
