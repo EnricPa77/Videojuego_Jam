@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnc5ddas7ech7"]
 
-[ext_resource type="Script" uid="uid://ci0sfcjfhk5c4" path="res://Scripts/Gameplay/EnemyTemplate.gd" id="1_g4dba"]
+[ext_resource type="Script" uid="uid://ci0sfcjfhk5c4" path="res://Scripts/Gameplay/UnitTemplate.gd" id="1_g4dba"]
 [ext_resource type="Texture2D" uid="uid://nxfcjb85pbgp" path="res://Assets/Sprites/Mace Soldier_Idle.png" id="2_p4to8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vy2uu"]
@@ -42,7 +42,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omhtt"]
 size = Vector2(53, 116)
 
-[node name="EnemyTemplate" type="CharacterBody2D" unique_id=1341347470 groups=["unit"]]
+[node name="UnitTemplate" type="CharacterBody2D" unique_id=1341347470 groups=["unit"]]
 script = ExtResource("1_g4dba")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1263043803]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c52b6ssx6uxqd"]
+
+[ext_resource type="Script" uid="uid://bvig4prttqrjl" path="res://Scripts/Gameplay/Spawner.gd" id="1_gjpho"]
+[ext_resource type="PackedScene" uid="uid://68km07q3of1n" path="res://Scenes/Manager/MouseSelection.tscn" id="3_45d1s"]
+
+[sub_resource type="GDScript" id="GDScript_j0p05"]
+script/source = "extends Resource
+
+class_name EnemyConfig
+
+@export var Template: PackedScene
+@export var Speed: float
+"
+
+[node name="World" type="Node2D" unique_id=199795705]
+script = ExtResource("1_gjpho")
+
+[node name="MouseSelection" parent="." unique_id=1231394261 instance=ExtResource("3_45d1s")]
+
+[node name="Node" type="Node" parent="." unique_id=1925369099]
+script = SubResource("GDScript_j0p05")
+Speed = null

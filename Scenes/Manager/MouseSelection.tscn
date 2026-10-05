@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://68km07q3of1n"]
 
-[ext_resource type="Script" uid="uid://y6deqfp2av4c" path="res://Scripts/Gameplay/mouse_selection.gd" id="1_s6t0l"]
+[ext_resource type="Script" uid="uid://y6deqfp2av4c" path="res://Scripts/Gameplay/MouseSelection.gd" id="1_s6t0l"]
 
 [node name="MouseSelection" type="Node" unique_id=1231394261]
 script = ExtResource("1_s6t0l")
