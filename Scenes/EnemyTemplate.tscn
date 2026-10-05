@@ -1,18 +1,57 @@
 [gd_scene format=3 uid="uid://cnc5ddas7ech7"]
 
 [ext_resource type="Script" uid="uid://ci0sfcjfhk5c4" path="res://Scripts/Gameplay/EnemyTemplate.gd" id="1_g4dba"]
-[ext_resource type="Texture2D" uid="uid://dh374mywdg8nh" path="res://Assets/Sprites/png-transparent-sirloin-steak-beef-tenderloin-meat-flat-iron-steak-meat-beef-cooking-steak.png" id="2_p4to8"]
+[ext_resource type="Texture2D" uid="uid://nxfcjb85pbgp" path="res://Assets/Sprites/Mace Soldier_Idle.png" id="2_p4to8"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_i7hxs"]
-radius = 49.0408
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy2uu"]
+atlas = ExtResource("2_p4to8")
+region = Rect2(0, 0, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv8pg"]
+atlas = ExtResource("2_p4to8")
+region = Rect2(128, 0, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ammgr"]
+atlas = ExtResource("2_p4to8")
+region = Rect2(256, 0, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svyno"]
+atlas = ExtResource("2_p4to8")
+region = Rect2(384, 0, 128, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ih278"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy2uu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv8pg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ammgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svyno")
+}],
+"loop": 1,
+"name": &"Iddle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omhtt"]
+size = Vector2(53, 116)
 
 [node name="EnemyTemplate" type="CharacterBody2D" unique_id=1341347470 groups=["unit"]]
 script = ExtResource("1_g4dba")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=799312266]
-position = Vector2(-4.999939, -2.000061)
-scale = Vector2(0.18152174, 0.16266666)
-texture = ExtResource("2_p4to8")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1263043803]
+scale = Vector2(2.0939267, 2)
+sprite_frames = SubResource("SpriteFrames_ih278")
+animation = &"Iddle"
+autoplay = "Iddle"
+offset = Vector2(8, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2006679867]
-shape = SubResource("CircleShape2D_i7hxs")
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_omhtt")
