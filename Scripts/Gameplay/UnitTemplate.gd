@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-class_name EnemyTemplate
+class_name UnitTemplate
 
-@export var Speed: float = 20.0
+var Speed: float
 
 var target_position: Vector2
 var moving := false
@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 	# Moverse hacia el punto
 	if moving:
 		var direction = global_position.direction_to(target_position)
+		print(Speed)
 		velocity = direction * Speed
 		move_and_slide()
 
@@ -26,3 +27,5 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 			moving = false
 			
+func unitBuilder(Speed: float):
+	self.Speed = Speed

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c52b6ssx6uxqd"]
+
+[ext_resource type="Script" uid="uid://bvig4prttqrjl" path="res://Scripts/Gameplay/spawner.gd" id="1_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://cnc5ddas7ech7" path="res://Scenes/EnemyTemplate.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://68km07q3of1n" path="res://Scenes/Manager/mouse_selection.tscn" id="2_go701"]
+[ext_resource type="Script" uid="uid://bk0nb2a5ljedl" path="res://Scenes/node.gd" id="4_8j60k"]
+
+[node name="World" type="Node2D" unique_id=199795705]
+script = ExtResource("1_5a7ea")
+Template = ExtResource("1_a02cp")
+
+[node name="MouseSelection" parent="." unique_id=1231394261 instance=ExtResource("2_go701")]
+
+[node name="Node" type="Node" parent="." unique_id=1925369099]
+script = ExtResource("4_8j60k")
