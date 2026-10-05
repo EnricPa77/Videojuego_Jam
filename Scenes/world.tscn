@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cnc5ddas7ech7" path="res://Scenes/EnemyTemplate.tscn" id="2_p70al"]
 [ext_resource type="PackedScene" uid="uid://68km07q3of1n" path="res://Scenes/Manager/MouseSelection.tscn" id="3_45d1s"]
 [ext_resource type="Script" uid="uid://coo6bh38onyw1" path="res://Scripts/Config/UnitConfig.gd" id="4_y7y61"]
+[ext_resource type="Script" uid="uid://d1l3mwktajkuv" path="res://Scripts/UI/HUD.gd" id="5_fo5ed"]
 
 [sub_resource type="Resource" id="Resource_p4to8"]
 script = ExtResource("4_y7y61")
@@ -16,3 +17,77 @@ script = ExtResource("1_gjpho")
 units = Array[ExtResource("4_y7y61")]([SubResource("Resource_p4to8")])
 
 [node name="MouseSelection" parent="." unique_id=1231394261 instance=ExtResource("3_45d1s")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1463556722]
+script = ExtResource("5_fo5ed")
+
+[node name="GoldShards" type="GridContainer" parent="CanvasLayer" unique_id=131873111]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 162.0
+offset_bottom = 106.0
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Gold" type="Label" parent="CanvasLayer/GoldShards" unique_id=1657780230]
+modulate = Color(0.9372549, 0.9098039, 0.101960786, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "GOLD"
+
+[node name="GoldValue" type="Label" parent="CanvasLayer/GoldShards" unique_id=359807892]
+unique_name_in_owner = true
+modulate = Color(0.9372549, 0.9098039, 0.101960786, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="Shards" type="Label" parent="CanvasLayer/GoldShards" unique_id=1000965562]
+modulate = Color(0.4392157, 1, 1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "SHARDS"
+
+[node name="ShardsValue" type="Label" parent="CanvasLayer/GoldShards" unique_id=579430803]
+unique_name_in_owner = true
+modulate = Color(0.4392157, 1, 1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="SoldiersMiners" type="GridContainer" parent="CanvasLayer" unique_id=831930586]
+anchors_preset = -1
+anchor_left = 0.6944444
+anchor_top = 0.030864198
+anchor_right = 0.9609375
+anchor_bottom = 0.16358025
+grow_horizontal = 0
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 10
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Soldiers" type="Label" parent="CanvasLayer/SoldiersMiners" unique_id=1259110947]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "SOLDIERS"
+
+[node name="Miners" type="Label" parent="CanvasLayer/SoldiersMiners" unique_id=547609386]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "MINERS"
+
+[node name="SoldiersValue" type="Label" parent="CanvasLayer/SoldiersMiners" unique_id=591784184]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+
+[node name="MinersValue" type="Label" parent="CanvasLayer/SoldiersMiners" unique_id=26091975]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
