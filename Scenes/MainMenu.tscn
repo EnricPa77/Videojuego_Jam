@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cyekclcohwdxw" path="res://Assets/UI/Textures/MenuPrincipalFondo.png" id="1_8saeu"]
 [ext_resource type="Texture2D" uid="uid://0rer1bsfft50" path="res://Assets/UI/Textures/HoverMainMenu.png" id="1_853f1"]
-[ext_resource type="Script" uid="uid://dc5qvj0378ivj" path="res://Scripts/UI/main_menu.gd" id="1_df05h"]
-[ext_resource type="Shader" uid="uid://dn337h8ajl7g" path="res://Scripts/UI/Scroll.gdshader" id="1_ghw46"]
+[ext_resource type="Script" uid="uid://dc5qvj0378ivj" path="res://Scenes/main_menu.gd" id="1_df05h"]
+[ext_resource type="Shader" uid="uid://dn337h8ajl7g" path="res://Scenes/Scroll.gdshader" id="1_ghw46"]
 [ext_resource type="Texture2D" uid="uid://wkde2bcn8e3j" path="res://Assets/UI/Textures/ButtonMainMenu.png" id="1_tt5f1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ghw46"]
