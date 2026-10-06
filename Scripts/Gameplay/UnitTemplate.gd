@@ -26,5 +26,5 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 			moving = false
 			
-func unitBuilder(Speed: float):
+func unit_setup(Speed: float):
 	self.Speed = Speed
