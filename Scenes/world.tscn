@@ -1,25 +1,25 @@
 [gd_scene format=3 uid="uid://c52b6ssx6uxqd"]
 
-[ext_resource type="Script" uid="uid://bvig4prttqrjl" path="res://Scripts/Gameplay/Spawner.gd" id="1_gjpho"]
-[ext_resource type="PackedScene" uid="uid://cnc5ddas7ech7" path="res://Scenes/EnemyTemplate.tscn" id="2_p70al"]
-[ext_resource type="PackedScene" uid="uid://68km07q3of1n" path="res://Scenes/Manager/MouseSelection.tscn" id="3_45d1s"]
-[ext_resource type="Script" uid="uid://coo6bh38onyw1" path="res://Scripts/Config/UnitConfig.gd" id="4_y7y61"]
-[ext_resource type="Script" uid="uid://d1l3mwktajkuv" path="res://Scripts/UI/HUD.gd" id="5_fo5ed"]
+[ext_resource type="Script" uid="uid://bvig4prttqrjl" path="res://Scripts/Gameplay/Spawner.gd" id="1_p70al"]
+[ext_resource type="Script" uid="uid://coo6bh38onyw1" path="res://Scripts/Config/UnitConfig.gd" id="2_45d1s"]
+[ext_resource type="PackedScene" uid="uid://cnc5ddas7ech7" path="res://Scenes/EnemyTemplate.tscn" id="3_y7y61"]
+[ext_resource type="PackedScene" uid="uid://68km07q3of1n" path="res://Scenes/Manager/MouseSelection.tscn" id="4_q2d71"]
+[ext_resource type="Script" uid="uid://d1l3mwktajkuv" path="res://Scripts/UI/Hud.gd" id="5_p70al"]
 
 [sub_resource type="Resource" id="Resource_p4to8"]
-script = ExtResource("4_y7y61")
-UnitScene = ExtResource("2_p70al")
+script = ExtResource("2_45d1s")
+UnitScene = ExtResource("3_y7y61")
 Speed = 20.0
 metadata/_custom_type_script = "uid://coo6bh38onyw1"
 
 [node name="World" type="Node2D" unique_id=199795705]
-script = ExtResource("1_gjpho")
-units = Array[ExtResource("4_y7y61")]([SubResource("Resource_p4to8")])
+script = ExtResource("1_p70al")
+units = Array[ExtResource("2_45d1s")]([SubResource("Resource_p4to8")])
 
-[node name="MouseSelection" parent="." unique_id=1231394261 instance=ExtResource("3_45d1s")]
+[node name="MouseSelection" parent="." unique_id=1231394261 instance=ExtResource("4_q2d71")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1463556722]
-script = ExtResource("5_fo5ed")
+script = ExtResource("5_p70al")
 
 [node name="GoldShards" type="GridContainer" parent="CanvasLayer" unique_id=131873111]
 offset_left = 20.0
