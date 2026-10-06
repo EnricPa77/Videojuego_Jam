@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://c52b6ssx6uxqd"]
 
-[ext_resource type="Script" uid="uid://bvig4prttqrjl" path="res://Scripts/Gameplay/Spawner.gd" id="1_p70al"]
+[ext_resource type="Script" uid="uid://bvig4prttqrjl" path="res://Scripts/Gameplay/World.gd" id="1_p70al"]
 [ext_resource type="Script" uid="uid://coo6bh38onyw1" path="res://Scripts/Config/UnitConfig.gd" id="2_45d1s"]
 [ext_resource type="PackedScene" uid="uid://cv3a51q3b2o57" path="res://Scenes/UnitTemplate.tscn" id="3_45d1s"]
 [ext_resource type="PackedScene" uid="uid://cfqau0nsnqk70" path="res://Scenes/Manager/PlayerManager.tscn" id="3_gjpho"]
-[ext_resource type="PackedScene" uid="uid://68km07q3of1n" path="res://Scenes/Manager/MouseSelection.tscn" id="4_q2d71"]
 [ext_resource type="Script" uid="uid://d1l3mwktajkuv" path="res://Scripts/UI/Hud.gd" id="5_p70al"]
-[ext_resource type="Script" uid="uid://c3y1mc0eh2jbu" path="res://Scripts/Gameplay/PlayerManager.gd" id="6_y7y61"]
 
-[sub_resource type="Resource" id="Resource_p70al"]
+[sub_resource type="Resource" id="Resource_2xwgf"]
 script = ExtResource("2_45d1s")
 UnitScene = ExtResource("3_45d1s")
 Speed = 20.0
@@ -16,12 +14,9 @@ metadata/_custom_type_script = "uid://coo6bh38onyw1"
 
 [node name="World" type="Node2D" unique_id=199795705]
 script = ExtResource("1_p70al")
-units = Array[ExtResource("2_45d1s")]([SubResource("Resource_p70al")])
-
-[node name="MouseSelection" parent="." unique_id=1231394261 instance=ExtResource("4_q2d71")]
+units_config = Array[ExtResource("2_45d1s")]([SubResource("Resource_2xwgf")])
 
 [node name="PlayerManager" parent="." unique_id=1669883604 instance=ExtResource("3_gjpho")]
-script = ExtResource("6_y7y61")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1463556722]
 script = ExtResource("5_p70al")
