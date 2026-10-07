@@ -9,8 +9,9 @@ var moving := false
 var isSelected := false
 
 func move_to(target: Vector2) -> void:
-	target_position = target
-	moving = true
+	if isSelected:
+		target_position = target
+		moving = true
 
 func _physics_process(delta: float) -> void:
 	
@@ -26,5 +27,10 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 			moving = false
 			
-func unit_setup(Speed: float):
+func unit_setup(Speed: float) -> void:
 	self.Speed = Speed
+	
+func select() -> void:
+	self.isSelected = true
+	
+	

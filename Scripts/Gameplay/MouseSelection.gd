@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 class_name MouseSelection
 
@@ -43,9 +43,7 @@ func stop_draw_rectangle(event: InputEvent) -> void:
 		update_selection(rect)
 	#De lo contrario, cuenta como click.
 	else:
-		pass
-		#TODO
-		#_select_unit(event)
+		select_unit(event)
 
 #Selecciona las unidades a partir del rectángulo que se le pasa, las que no están dentro se desseleccionan
 func update_selection(rect: Rect2) -> void:
@@ -61,9 +59,40 @@ func update_selection(rect: Rect2) -> void:
 			unit.isSelected = false
 			
 func select_unit(event: InputEvent):
+	var mouse_position: Vector2 = event.position
+
+	var query := PhysicsPointQueryParameters2D.new()
+	query.position = mouse_position
+	query.collide_with_areas = true
+	query.collide_with_bodies = true
+
+	var results: Array[Dictionary] = get_world_2d().direct_space_state.intersect_point(query)
+	
+	var all_units: Array[UnitTemplate] = []
+
+	for node in get_tree().get_nodes_in_group("unit"):
+		if node is UnitTemplate:
+			all_units.append(node)
+			
+	for units in all_units:
+		units.isSelected = false
+	
 	selected_units.clear()
 	
-	var all_units = get_tree().get_nodes_in_group("unit")
+	for result in results:
+		var collider = result.collider
+		print(collider)
+		if collider is UnitTemplate:
+			
+			var unit: UnitTemplate = collider
+			unit.select()
+			selected_units.append(unit)
+			return
+			
+
+	
+
+	
 	
 func get_units() -> Array[UnitTemplate]:
 	return selected_units 
