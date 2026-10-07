@@ -14,7 +14,7 @@ func _input(event: InputEvent) -> void:
 
 	#Si deja de clicar calcula la distancia desde el inicio hasta el final
 	if event.is_action_released("click"):
-		mouseSelection.stop_draw_rectangle(event)
+		mouseSelection.stop_draw_rectangle(event, Input.is_action_pressed("control"))
 
 	#Si haces click derecho, mueve las unidades seleccionadas a la posición del mundo
 	if event.is_action_pressed("right_click"):

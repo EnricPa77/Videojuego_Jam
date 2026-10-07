@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c52b6ssx6uxqd"]
+[gd_scene format=3 uid="uid://bqe7obyk4s3is"]
 
 [ext_resource type="Script" uid="uid://bvig4prttqrjl" path="res://Scripts/Gameplay/World.gd" id="1_p70al"]
 [ext_resource type="Script" uid="uid://coo6bh38onyw1" path="res://Scripts/Config/UnitConfig.gd" id="2_45d1s"]

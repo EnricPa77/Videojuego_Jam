@@ -32,7 +32,7 @@ func draw_rectangle(event: InputEvent) -> void:
 	selection_rect.size = Vector2.ZERO
 	
 #Comprueba la distancia desde el inicio del rectángulo y hasta el final y selecciona unidades
-func stop_draw_rectangle(event: InputEvent) -> void:
+func stop_draw_rectangle(event: InputEvent, ctrl_is_pressed: bool) -> void:
 	mouse_dragging = false
 	selection_rect.hide()
 	drag_final_position = event.position
@@ -43,7 +43,7 @@ func stop_draw_rectangle(event: InputEvent) -> void:
 		update_selection(rect)
 	#De lo contrario, cuenta como click.
 	else:
-		select_unit(event)
+		select_unit(event, ctrl_is_pressed)
 
 #Selecciona las unidades a partir del rectángulo que se le pasa, las que no están dentro se desseleccionan
 func update_selection(rect: Rect2) -> void:
@@ -58,7 +58,7 @@ func update_selection(rect: Rect2) -> void:
 		else:
 			unit.isSelected = false
 			
-func select_unit(event: InputEvent):
+func select_unit(event: InputEvent, ctrl_is_pressed: bool):
 	var mouse_position: Vector2 = event.position
 
 	var query := PhysicsPointQueryParameters2D.new()
@@ -68,20 +68,21 @@ func select_unit(event: InputEvent):
 
 	var results: Array[Dictionary] = get_world_2d().direct_space_state.intersect_point(query)
 	
-	var all_units: Array[UnitTemplate] = []
+	if not ctrl_is_pressed:
+		var all_units: Array[UnitTemplate] = []
 
-	for node in get_tree().get_nodes_in_group("unit"):
-		if node is UnitTemplate:
-			all_units.append(node)
-			
-	for units in all_units:
-		units.isSelected = false
-	
-	selected_units.clear()
+		for node in get_tree().get_nodes_in_group("unit"):
+			if node is UnitTemplate:
+				all_units.append(node)
+				
+			for units in all_units:
+				units.isSelected = false
+				
+		selected_units.clear()
 	
 	for result in results:
 		var collider = result.collider
-		print(collider)
+		
 		if collider is UnitTemplate:
 			
 			var unit: UnitTemplate = collider
@@ -90,9 +91,5 @@ func select_unit(event: InputEvent):
 			return
 			
 
-	
-
-	
-	
 func get_units() -> Array[UnitTemplate]:
 	return selected_units 
