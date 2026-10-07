@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://y6deqfp2av4c" path="res://Scripts/Gameplay/MouseSelection.gd" id="1_s6t0l"]
 
-[node name="MouseSelection" type="Node" unique_id=1231394261]
+[node name="MouseSelection" type="Node2D" unique_id=488681423]
 script = ExtResource("1_s6t0l")
 
 [node name="SelectionRect" type="ColorRect" parent="." unique_id=1291003728]

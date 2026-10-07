@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c3y1mc0eh2jbu" path="res://Scripts/Gameplay/PlayerManager.gd" id="1_65h3a"]
 [ext_resource type="PackedScene" uid="uid://68km07q3of1n" path="res://Scenes/Manager/MouseSelection.tscn" id="1_omut5"]
 
-[node name="PlayerManager" type="Node" unique_id=1669883604]
+[node name="PlayerManager" type="Node2D" unique_id=1037413240]
 script = ExtResource("1_65h3a")
 
 [node name="MouseSelection" parent="." unique_id=1231394261 instance=ExtResource("1_omut5")]

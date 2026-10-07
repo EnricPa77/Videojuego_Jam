@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 @onready var mouseSelection: MouseSelection = $MouseSelection
 @onready var world: World = get_parent()
@@ -22,6 +22,8 @@ func _input(event: InputEvent) -> void:
 		
 	if event.is_action_pressed("space"):
 		spawn_unit()
+		
+
 
 
 
@@ -29,9 +31,10 @@ func _input(event: InputEvent) -> void:
 func move_units(mouseSelection: MouseSelection):
 	var selected_units: Array[UnitTemplate]
 	mouseSelection.get_units()
-	var target: Vector2 = world.get_global_mouse_position()
+	var target: Vector2 = get_global_mouse_position()
 	for unit in selected_units:
-		unit.move_to(target)
+		if unit.isSelected:
+			unit.move_to(target)
 
 func spawn_unit():
 	units_config = world.get_units_config()
