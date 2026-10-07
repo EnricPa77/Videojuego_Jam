@@ -4,7 +4,8 @@
 [ext_resource type="Script" uid="uid://coo6bh38onyw1" path="res://Scripts/Config/UnitConfig.gd" id="2_45d1s"]
 [ext_resource type="PackedScene" uid="uid://cv3a51q3b2o57" path="res://Scenes/UnitTemplate.tscn" id="3_45d1s"]
 [ext_resource type="PackedScene" uid="uid://cfqau0nsnqk70" path="res://Scenes/Manager/PlayerManager.tscn" id="3_gjpho"]
-[ext_resource type="Script" uid="uid://d1l3mwktajkuv" path="res://Scripts/UI/Hud.gd" id="5_p70al"]
+[ext_resource type="Script" uid="uid://d1l3mwktajkuv" path="res://Scripts/UI/Gameplay/HUD.gd" id="5_p70al"]
+[ext_resource type="PackedScene" uid="uid://cwqrvq4d3vqu5" path="res://Scenes/PauseMenu.tscn" id="6_5ukr8"]
 
 [sub_resource type="Resource" id="Resource_2xwgf"]
 script = ExtResource("2_45d1s")
@@ -91,3 +92,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "0"
 horizontal_alignment = 1
+
+[node name="PauseMenu" parent="." unique_id=1216690090 instance=ExtResource("6_5ukr8")]
+visible = false

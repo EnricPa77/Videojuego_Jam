@@ -15,7 +15,7 @@ func _ready():
 	play_button.pressed.connect(_on_play_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
 	options_button.pressed.connect(_on_options_pressed)
-	back_options_button.pressed.connect(_on_back_options_pressed)
+	options_menu.back_pressed.connect(_on_back_options_pressed)
 
 func _on_options_pressed():
 	main_buttons.visible = false
