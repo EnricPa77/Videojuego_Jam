@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cwqrvq4d3vqu5"]
+
+[ext_resource type="Script" uid="uid://2q0eduf4jk6y" path="res://Scripts/UI/PauseMenu/PauseMenu.gd" id="1_5w4ur"]
+[ext_resource type="Texture2D" uid="uid://0rer1bsfft50" path="res://Assets/UI/Textures/HoverMainMenu.png" id="2_ey1tb"]
+[ext_resource type="Texture2D" uid="uid://wkde2bcn8e3j" path="res://Assets/UI/Textures/ButtonMainMenu.png" id="3_siy43"]
+[ext_resource type="PackedScene" uid="uid://df52bboabd3yp" path="res://Scenes/Optionsmenu.tscn" id="4_ey1tb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omhtt"]
+bg_color = Color(0.28627452, 0.2901961, 0.32941177, 0.94509804)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_853f1"]
+load_path = "res://.godot/imported/ButtonMainMenu.png-184cd61725eb3c17b7a7385f78384bb5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxrls"]
+texture = SubResource("CompressedTexture2D_853f1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqxqw"]
+texture = ExtResource("2_ey1tb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lptsj"]
+texture = ExtResource("3_siy43")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_425uk"]
+texture = ExtResource("2_ey1tb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mys0b"]
+texture = ExtResource("3_siy43")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c7c70"]
+texture = ExtResource("2_ey1tb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmvjn"]
+texture = ExtResource("3_siy43")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1363l"]
+texture = ExtResource("2_ey1tb")
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1216690090]
+process_mode = 3
+layer = 10
+script = ExtResource("1_5w4ur")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=177979206]
+modulate = Color(0, 0, 0, 0.3372549)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=752096167]
+modulate = Color(0.7647059, 0.81960785, 0.8745098, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.75
+offset_top = -194.75
+offset_right = 194.75
+offset_bottom = 194.75
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_omhtt")
+
+[node name="Tittle" type="Label" parent="Panel" unique_id=706810909]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 16.5
+offset_bottom = 57.5
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=281647672]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.72025
+offset_top = -112.0
+offset_right = 148.72025
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="Continue" type="Button" parent="Panel/VBoxContainer" unique_id=1426773604]
+custom_minimum_size = Vector2(240, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_yxrls")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gqxqw")
+text = "CONTINUE"
+
+[node name="Options" type="Button" parent="Panel/VBoxContainer" unique_id=841643804]
+custom_minimum_size = Vector2(240, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_lptsj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_425uk")
+text = "OPTIONS"
+
+[node name="ExitToMenu" type="Button" parent="Panel/VBoxContainer" unique_id=1656130610]
+custom_minimum_size = Vector2(240, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_mys0b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c7c70")
+text = "EXIT TO MENU"
+
+[node name="Exit" type="Button" parent="Panel/VBoxContainer" unique_id=194806683]
+custom_minimum_size = Vector2(240, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_pmvjn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1363l")
+text = "EXIT"
+
+[node name="OptionsMenu" parent="." unique_id=996881894 instance=ExtResource("4_ey1tb")]
+visible = false
